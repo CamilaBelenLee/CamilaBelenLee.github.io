@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Camila Belén Lee — Software Developer</title>
+<meta name="description" content="Camila Belén Lee — Computer Engineering student at ITBA and full-stack developer based in Buenos Aires. Builds software end-to-end." />
+
+<!-- Open Graph: makes the link preview nicely when pasted into forms, chats, etc. -->
+<meta property="og:title" content="Camila Belén Lee — Software Developer" />
+<meta property="og:description" content="Computer Engineering @ ITBA. I build software end-to-end — from a production point-of-sale platform to a Unix-like kernel." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --paper:   #F4F3EE;
+    --raised:  #FBFAF7;
+    --ink:     #1A1A18;
+    --muted:   #6E6D66;
+    --hair:    #DEDCD3;
+    --accent:  #2B2BE0;
+    --on-accent: #FBFAF7;
+
+    --display: 'Bricolage Grotesque', system-ui, sans-serif;
+    --body: 'Inter', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 8vw, 6rem) clamp(1.25rem, 5vw, 2rem) 3rem;
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.02em;
+    color: var(--muted);
+    text-transform: none;
+    margin: 0 0 1.4rem;
+  }
+  .eyebrow .dot { color: var(--accent); }
+
+  h1 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(2.6rem, 9vw, 4.4rem);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    margin: 0 0 1.1rem;
+  }
+
+  .thesis {
+    font-size: clamp(1.05rem, 3.4vw, 1.3rem);
+    line-height: 1.45;
+    max-width: 34ch;
+    margin: 0 0 2.2rem;
+    color: var(--ink);
+  }
+  .thesis strong { font-weight: 500; }
+
+  /* actions */
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.1rem;
+    margin-bottom: 2.6rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 0.7rem 1.15rem;
+    border-radius: 2px;
+    transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--on-accent);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(43,43,224,0.24); }
+  .btn-ghost {
+    color: var(--ink);
+    border: 1px solid var(--hair);
+    background: var(--raised);
+  }
+  .btn-ghost:hover { transform: translateY(-2px); border-color: var(--ink); }
+
+  .inline-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1rem;
+    font-family: var(--mono);
+    font-size: 0.85rem;
+  }
+  .inline-links a {
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  .inline-links a:hover { color: var(--ink); border-color: var(--ink); }
+
+  /* rule */
+  .rule {
+    border: 0;
+    border-top: 1px solid var(--hair);
+    margin: 2.8rem 0 1.6rem;
+  }
+
+  .section-label {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin: 0 0 1.4rem;
+  }
+
+  /* work list */
+  .work { display: flex; flex-direction: column; }
+
+  .item {
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    gap: 0.4rem 1rem;
+    padding: 1.1rem 0;
+    border-top: 1px solid var(--hair);
+    text-decoration: none;
+    color: inherit;
+    align-items: baseline;
+  }
+  .item:first-child { border-top: 0; }
+  .item.no-link { cursor: default; }
+
+  .tag {
+    font-family: var(--mono);
+    font-size: 0.74rem;
+    color: var(--accent);
+    padding-top: 0.15rem;
+  }
+
+  .item-main { min-width: 0; }
+  .item-title {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1.12rem;
+    letter-spacing: -0.01em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+  }
+  .item-title .arrow {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--muted);
+    transition: transform 0.15s ease, color 0.15s ease;
+  }
+  a.item:hover .item-title .arrow { transform: translate(3px, -3px); color: var(--accent); }
+  a.item:hover .item-title { color: var(--accent); }
+
+  .item-desc {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-top: 0.2rem;
+  }
+  .badge {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    color: var(--muted);
+    border: 1px solid var(--hair);
+    border-radius: 2px;
+    padding: 0.05rem 0.4rem;
+    vertical-align: middle;
+  }
+
+  footer {
+    margin-top: 3rem;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  footer a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+  footer a:hover { color: var(--ink); }
+
+  /* accessible focus */
+  a:focus-visible, .btn:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* entrance animation */
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal { opacity: 0; transform: translateY(10px); animation: rise 0.6s cubic-bezier(0.2,0.7,0.2,1) forwards; }
+    .reveal:nth-child(1) { animation-delay: 0.02s; }
+    .reveal:nth-child(2) { animation-delay: 0.08s; }
+    .reveal:nth-child(3) { animation-delay: 0.14s; }
+    .reveal:nth-child(4) { animation-delay: 0.20s; }
+    .reveal:nth-child(5) { animation-delay: 0.26s; }
+    .reveal:nth-child(6) { animation-delay: 0.32s; }
+    .reveal:nth-child(7) { animation-delay: 0.38s; }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+  }
+
+  @media (max-width: 460px) {
+    .item { grid-template-columns: 1fr; gap: 0.15rem; }
+    .tag { padding-top: 0; }
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="eyebrow reveal">Computer Engineering <span class="dot">·</span> ITBA <span class="dot">·</span> Buenos Aires, Argentina</p>
+
+    <h1 class="reveal">Camila&nbsp;Belén&nbsp;Lee</h1>
+
+    <p class="thesis reveal">
+      I build software end-to-end — <strong>from a production point-of-sale platform to a Unix-like kernel.</strong>
+    </p>
+
+    <div class="actions reveal">
+      <a class="btn btn-primary" href="Camila_Lee_CV.pdf" target="_blank" rel="noopener">View CV ↗</a>
+      <a class="btn btn-ghost" href="Camila_Lee_CV.pdf" download>Download PDF</a>
+    </div>
+
+    <div class="inline-links reveal">
+      <a href="https://github.com/CamilaBelenLee" target="_blank" rel="noopener">github.com/CamilaBelenLee</a>
+      <a href="https://linkedin.com/in/camilabelenlee" target="_blank" rel="noopener">linkedin.com/in/camilabelenlee</a>
+      <a href="mailto:clee@itba.edu.ar">clee@itba.edu.ar</a>
+    </div>
+
+    <hr class="rule reveal" />
+
+    <p class="section-label reveal">// selected work</p>
+
+    <div class="work">
+      <!-- Mini Diosa: production, private business tool — no public link -->
+      <div class="item no-link reveal">
+        <span class="tag">[product]</span>
+        <div class="item-main">
+          <div class="item-title">Mini Diosa Sync <span class="badge">production · private</span></div>
+          <p class="item-desc">Inventory + point-of-sale platform, built and shipped solo. React 18, TypeScript, Tailwind, PostgreSQL, and an integrated Claude API assistant.</p>
+        </div>
+      </div>
+
+      <a class="item reveal" href="http://pawserver.it.itba.edu.ar/paw-2025a-16/" target="_blank" rel="noopener">
+        <span class="tag">[product]</span>
+        <div class="item-main">
+          <div class="item-title">Podium <span class="arrow">↗</span></div>
+          <p class="item-desc">Live full-stack podcast platform with a social recommendation layer. Spring Boot, PostgreSQL, cosine-similarity engine, 100+ tests.</p>
+        </div>
+      </a>
+
+      <a class="item reveal" href="https://github.com/CamilaBelenLee/cloud_provider_analytics" target="_blank" rel="noopener">
+        <span class="tag">[data]</span>
+        <div class="item-main">
+          <div class="item-title">Cloud Provider Analytics <span class="arrow">↗</span></div>
+          <p class="item-desc">End-to-end Python data pipeline over a medallion data lake — batch and streaming layers in PySpark, served from Cassandra.</p>
+        </div>
+      </a>
+
+      <a class="item reveal" href="https://github.com/CamilaBelenLee/unix-kernel-x86" target="_blank" rel="noopener">
+        <span class="tag">[systems]</span>
+        <div class="item-main">
+          <div class="item-title">x86-64 Unix-like Kernel <span class="arrow">↗</span></div>
+          <p class="item-desc">A Unix-like kernel from scratch in C and assembly: preemptive scheduler, memory allocators, IPC, and semaphore synchronization.</p>
+        </div>
+      </a>
+    </div>
+
+    <footer class="reveal">
+      Buenos Aires · ES / EN · <a href="https://github.com/CamilaBelenLee" target="_blank" rel="noopener">more on GitHub ↗</a>
+    </footer>
+  </main>
+</body>
+</html>
