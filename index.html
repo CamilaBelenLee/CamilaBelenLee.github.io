@@ -188,6 +188,15 @@
     color: var(--muted);
     margin-top: 0.2rem;
   }
+  .item-desc code {
+    font-family: var(--mono);
+    font-size: 0.86em;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--hair);
+    border-radius: 2px;
+    padding: 0.02em 0.32em;
+  }
   .badge {
     font-family: var(--mono);
     font-size: 0.68rem;
@@ -268,6 +277,14 @@
         </div>
       </div>
 
+      <a class="item reveal" href="https://ceitba.org.ar/scheduler" target="_blank" rel="noopener">
+        <span class="tag">[product]</span>
+        <div class="item-main">
+          <div class="item-title">CEITBA Course Scheduler <span class="arrow">↗</span></div>
+          <p class="item-desc">Live course-schedule combiner used by 7,000+ ITBA students. Built the TypeScript/React frontend and backend endpoints over the official course API, in a team of 4.</p>
+        </div>
+      </a>
+
       <a class="item reveal" href="http://pawserver.it.itba.edu.ar/paw-2025a-16/" target="_blank" rel="noopener">
         <span class="tag">[product]</span>
         <div class="item-main">
@@ -291,10 +308,18 @@
           <p class="item-desc">A Unix-like kernel from scratch in C and assembly: preemptive scheduler, memory allocators, IPC, and semaphore synchronization.</p>
         </div>
       </a>
+
+      <div class="item no-link reveal">
+        <span class="tag">[practice]</span>
+        <div class="item-main">
+          <div class="item-title">How I work</div>
+          <p class="item-desc">AI-native but ownership-first: a repeatable system around Claude Code — a version-controlled <code>context/</code> source of truth the agent must read, plus custom lifecycle agents (<code>/architect</code>, <code>/imprint</code>, <code>/review</code>) that report while I decide.</p>
+        </div>
+      </div>
     </div>
 
     <footer class="reveal">
-      Buenos Aires · ES / EN · <a href="https://github.com/CamilaBelenLee" target="_blank" rel="noopener">more on GitHub ↗</a>
+      Buenos Aires · ES / EN / KO · <a href="https://github.com/CamilaBelenLee" target="_blank" rel="noopener">more on GitHub ↗</a>
     </footer>
   </main>
 </body>
